@@ -7,7 +7,7 @@
       <div class="form-column">
         <label for="band1">Band 1</label>
         <select class="form-select" id="band1" [(ngModel)]="selectedValue1" name="band">
-          <option [value]="''" selected disabled>Select a band</option>
+          <option [value]="''" selected disabled>Select one</option>
           <option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.value" [style.color]="band.textColor">
             {{band.viewValue}}
           </option>
@@ -16,7 +16,7 @@
       <div class="form-column">
         <label for="band2">Band 2</label>
         <select class="form-select" id="band2" [(ngModel)]="selectedValue2" name="band">
-          <option [value]="''" selected disabled>Select a band</option>
+          <option [value]="''" selected disabled>Select one</option>
           <option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.value" [style.color]="band.textColor">
             {{band.viewValue}}
           </option>
@@ -25,7 +25,7 @@
       <div class="form-column">
         <label for="band3">Band 3</label>
         <select class="form-select" id="band3" [(ngModel)]="selectedValue3" name="band">
-          <option [value]="''" selected disabled>Select a band</option>
+          <option [value]="''" selected disabled>Select one</option>
           <option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.value" [style.color]="band.textColor">
             {{band.viewValue}}
           </option>
