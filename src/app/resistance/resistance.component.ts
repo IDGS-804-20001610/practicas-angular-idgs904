@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 interface Band {
   value: string;
   viewValue: string;
-  color: string;
   textColor: string;
 }
 
@@ -11,7 +10,6 @@ interface Tolerance {
   value: string;
   ViewValue: string;
 }
-
 
 @Component({
   selector: 'app-resistance',
@@ -32,16 +30,16 @@ export class ResistanceComponent {
   selectedTolerance: string = '';
 
   bands: Band[] = [
-    { value: 'black', viewValue: 'Black', color: 'black', textColor: 'white' },
-    { value: 'brown', viewValue: 'Brown', color: 'brown', textColor: 'white' },
-    { value: 'red', viewValue: 'Red', color: 'red', textColor: 'white' },
-    { value: 'orange', viewValue: 'Orange', color: 'orange', textColor: 'white' },
-    { value: 'yellow', viewValue: 'Yellow', color: 'yellow', textColor: 'black' },
-    { value: 'green', viewValue: 'Green', color: 'green', textColor: 'white' },
-    { value: 'blue', viewValue: 'Blue', color: 'blue', textColor: 'white' },
-    { value: 'purple', viewValue: 'Purple', color: 'purple', textColor: 'white' },
-    { value: 'gray', viewValue: 'Gray', color: 'gray', textColor: 'white' },
-    { value: 'white', viewValue: 'White', color: 'white', textColor: 'black' }
+    { value: 'black', viewValue: 'Black', textColor: 'white' },
+    { value: 'brown', viewValue: 'Brown', textColor: 'white' },
+    { value: 'red', viewValue: 'Red', textColor: 'white' },
+    { value: 'orange', viewValue: 'Orange', textColor: 'white' },
+    { value: 'yellow', viewValue: 'Yellow', textColor: 'black' },
+    { value: 'green', viewValue: 'Green', textColor: 'white' },
+    { value: 'blue', viewValue: 'Blue', textColor: 'white' },
+    { value: 'purple', viewValue: 'Purple', textColor: 'white' },
+    { value: 'gray', viewValue: 'Gray', textColor: 'white' },
+    { value: 'white', viewValue: 'White', textColor: 'black' }
   ];
 
   
