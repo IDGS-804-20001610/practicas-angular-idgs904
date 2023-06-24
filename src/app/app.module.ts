@@ -10,8 +10,7 @@ import { ResistanceModule } from './resistance/resistance.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ResistanceComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

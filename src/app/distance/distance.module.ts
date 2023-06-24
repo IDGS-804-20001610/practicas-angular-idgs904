@@ -7,7 +7,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { DistanceComponent } from './distance.component';
-import { ResistanceComponent } from '../resistance/resistance.component';
 
 
 

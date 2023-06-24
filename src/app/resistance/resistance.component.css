@@ -1,0 +1,38 @@
+.form-container {
+    margin: 20px;
+}
+
+.band-toler-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.band-select {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.toler-select {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+}
+
+.legend-center {
+    text-align: center;
+    margin-bottom: 20px;
+}  

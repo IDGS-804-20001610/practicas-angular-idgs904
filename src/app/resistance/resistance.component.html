@@ -1,1 +1,85 @@
-<p>resistance works!</p>
+<form class="form-container">
+  <fieldset>
+    <legend class="legend-center">Band selection</legend>
+    <div class="band-toler-select">
+      <div class="band-select">
+        <mat-form-field>
+          <mat-label>Select a band</mat-label>
+          <mat-select [(ngModel)]="selectedValue1" name="band">
+            <mat-option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.color" [style.color]="band.textColor">
+              {{band.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p> Selected band: {{selectedValue1}} </p>
+      </div>
+
+      <div class="band-select">
+        <mat-form-field>
+          <mat-label>Select a band</mat-label>
+          <mat-select [(ngModel)]="selectedValue2" name="band">
+            <mat-option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.color" [style.color]="band.textColor">
+              {{band.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p> Selected band: {{selectedValue2}} </p>
+      </div>
+
+      <div class="band-select">
+        <mat-form-field>
+          <mat-label>Select a band</mat-label>
+          <mat-select [(ngModel)]="selectedValue3" name="band">
+            <mat-option *ngFor="let band of bands" [value]="band.value" [style.background-color]="band.color" [style.color]="band.textColor">
+              {{band.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p> Selected band: {{selectedValue3}} </p>
+      </div>
+
+      <div class="toler-select">
+        <label>Pick a tolerance</label>
+        <mat-radio-group [(ngModel)] = "selectedTolerance" name="toler">
+          <mat-radio-button *ngFor="let tol of tolerances" [value]="tol.value">
+            {{tol.ViewValue}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <p> Selected band: {{selectedTolerance}} </p>
+      </div>
+    </div>
+  </fieldset>
+  
+  <button mat-stroked-button (click)="calculate()" color="primary">Calculate</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">C1</th>
+        <th scope="col">C2</th>
+        <th scope="col">C3</th>
+        <th scope="col">Value</th>
+        <th scope="col">-</th>
+        <th scope="col">+</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [style.background-color]="selectedValue1">{{ba1}}</td>
+        <td [style.background-color]="selectedValue2">{{ba2}}</td>
+        <td [style.background-color]="selectedValue3">{{ba3}}</td>
+        <td>{{result}}</td>
+        <td>{{min}}</td>
+        <td>{{max}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <div class="result">
+    <h1>Results: </h1>
+    <p>Minimun: {{min}}</p>
+    <p>Maximun: {{max}}</p>
+    <p>Calculated value: {{result}}</p>
+  </div>
+</form>
