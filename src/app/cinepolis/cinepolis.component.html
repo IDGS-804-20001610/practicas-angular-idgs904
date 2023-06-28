@@ -1,0 +1,51 @@
+<div class="background-image"></div>
+  <div class="form-container">
+    <h1>Cinépolis</h1>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="form-field">
+            <mat-form-field appearance="fill">
+              <mat-label>Full Name</mat-label>
+              <input matInput type="string" [(ngModel)]="name" placeholder="Ex. Brenda Ruiz">
+            </mat-form-field>
+          </div>
+          <div class="form-field">
+            <mat-form-field appearance="fill">
+              <mat-label>Number of Buyers</mat-label>
+              <input matInput type="number" [(ngModel)]="buyers" placeholder="Ex 2">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="column">
+          <div class="form-field">
+            <mat-label>Cineco Card</mat-label>
+            <mat-radio-group [(ngModel)]="optionCard">
+              <mat-radio-button class="radio-button" value="1">Yes</mat-radio-button>
+              <mat-radio-button class="radio-button" value="2">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="form-field">
+            <mat-form-field appearance="fill">
+              <mat-label>Number of Tickets:</mat-label>
+              <input matInput type="number" [(ngModel)]="tickets" placeholder="Ex. 7">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <button mat-stroked-button color="primary"(click)="calculate()">Calculate</button>
+
+      <div *ngIf="result" class="result">
+        <h2>Total Due:</h2>
+        <p>{{ result | currency:'MXN':true }}</p>
+        <p>Ordered by: {{ name }}</p>
+        <p>Number of Tickets: {{ tickets }}</p>
+      </div>
+
+      <div class="error-container" *ngIf="result==0">
+        <p>Error: The number of tickets purchased cannot exceed {{ buyers * 7 }}</p>
+      </div>
+
+      <p class="note">YOU CAN ONLY BUY 7 TICKETS PER PERSON</p>
+    </div>
+  </div>

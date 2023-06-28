@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DistanceModule } from './distance/distance.module';
 import { ResistanceModule } from './resistance/resistance.module';
+import { CinepolisComponent } from './cinepolis/cinepolis.component';
+import { CinepolisModule } from './cinepolis/cinepolis.module';
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { ResistanceModule } from './resistance/resistance.module';
     BrowserModule,
     BrowserAnimationsModule,
     DistanceModule,
-    ResistanceModule
+    ResistanceModule,
+    CinepolisModule
   ],
   providers: [],
   bootstrap: [AppComponent]

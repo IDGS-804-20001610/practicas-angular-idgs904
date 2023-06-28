@@ -1,0 +1,69 @@
+.background-image {
+  background-image: url("https://brandemia.org/contenido/subidas/2019/07/logo-cinepolis-1200x670.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  filter: blur(3px);
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.radio-button {
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 10px;
+}
+
+.result {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.error-container {
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+
+  p {
+    margin: 5px;
+  }
+}
+
+.note {
+  margin-top: 10px;
+  margin-bottom: 20px; 
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
