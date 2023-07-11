@@ -1,0 +1,92 @@
+<div class="container">
+  <h1>Pizzas</h1>
+  <div class="customer-info">
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" type="text" placeholder="Name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="address" type="text" placeholder="Address" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="phone" type="number" placeholder="Phone" required>
+    </mat-form-field>
+  </div>
+  <div class="order-info">
+    <div class="pizza-size">
+      <h2>Size</h2>
+      <mat-radio-group [(ngModel)]="pizzaSize">
+        <mat-radio-button value="Small">Small</mat-radio-button>
+        <mat-radio-button value="Medium">Medium</mat-radio-button>
+        <mat-radio-button value="Large">Large</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="toppings">
+      <h2>Toppings</h2>
+      <div *ngFor="let topping of toppings">
+        <label>
+          <input type="checkbox" [(ngModel)]="topping.checked"> {{ topping.name }}
+        </label>
+      </div>
+    </div>
+    <div class="no-pizzas">
+      <mat-form-field>
+        <input matInput [(ngModel)]="noPizzas" type="number" placeholder="No. Pizzas" required>
+      </mat-form-field>
+      <div class="add-button">
+        <button mat-raised-button color="primary" (click)="calculateSubtotal()">Add</button>
+      </div>
+    </div>
+  </div>
+  <div class="order-summary">
+    <table>
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Toppings</th>
+          <th>No. Pizzas</th>
+          <th>Subtotal</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.size }}</td>
+          <td>{{ order.toppings }}</td>
+          <td>{{ order.noPizzas }}</td>
+          <td>{{ order.subtotal }}</td>
+          <td><button mat-raised-button color="warn" (click)="delete(order.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </div>
+  <div class="ticket" *ngIf="showTicket">
+    <h2>Ticket</h2>
+    <p>Nombre del cliente: {{ name }}</p>
+    <p>Total a pagar: ${{ calculateTotal() }}</p>
+  </div>
+  <button mat-raised-button color="primary" (click)="show()">Finish</button>
+  <button mat-stroked-button color="primary" (click)="new()">New Order</button>
+</div>
+
+<div class="order-summary" *ngIf="showTicket">
+  <table>
+    <thead>
+      <tr>
+        <th>Client</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let day of days">
+        <td>{{ day.name }}</td>
+        <td>{{ day.total }}</td>
+        
+      </tr>
+
+    </tbody>
+    <!-- {{calculateTotalFinal()}} -->
+  </table>
+  <p>Total del día: ${{ calculateTotalDay() }}</p>
+  <br>
+</div>

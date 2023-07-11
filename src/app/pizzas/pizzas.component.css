@@ -1,0 +1,139 @@
+.container {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.customer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: calc(33.33% - 10px);
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pizza-size {
+  width: 33.33%;
+}
+
+.toppings {
+  width: 33.33%;
+}
+
+.no-pizzas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 33.33%;
+}
+
+.add-button {
+  margin-left: 10px;
+}
+
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-item p:first-of-type {
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+.ticket {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.ticket h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ticket p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin-top: 0;
+}
+
+.new-order-button {
+  margin-top: 20px;
+}
+
+.order-summary {
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
